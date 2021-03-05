@@ -1,13 +1,6 @@
 <nav class="navbar navbar-app navbar-expand-lg navbar-dark bg-dark w-100 apps">
-  <a style="padding-left: 15px;" class="navbar-brand" app-nav href="#">iCoder</a>
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
-    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-    aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
-
-
-  <div class="app-menu" id="app-menu" >
+  <a style="padding-left: 15px;" class="navbar-brand" app-nav href="#">Thecoder</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" class="app-menu" id="app-menu">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
@@ -36,6 +29,7 @@
       </li>
     </ul>
   </div>
+  <div class="side">
   <div class="form-inline my-2 my-lg-0 " style="
   justify-content: flex-end;">
     <button style="margin-right: 7px;" (click)="open()">
@@ -46,21 +40,66 @@
       <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
     </form>
     <div class="mx-2">
-      <button (click)="openModal(template)" style="margin-right: 8px;" class="btn btn-danger" data-toggle="modal">Login</button>
-      <button class="btn btn-danger" data-toggle="modal">Signup</button>
+      <button (click)="openModal(template)" style="margin-right: 8px;" class="btn btn-danger"
+        data-toggle="modal">Login</button>
+      <button (click)="openModal1(template1)" class="btn btn-danger" data-toggle="modal">Signup</button>
     </div>
   </div>
+</div>
 </nav>
+
 
 <ng-template #template>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
+    <h4 class="modal-title pull-left">Login to icoder</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    This is a modal.
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #template1>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Get an icoder account</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="form-group">
+        <label for="cexampleInputPassword1">Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Create an account</button>
+    </form>
   </div>
 </ng-template>
 

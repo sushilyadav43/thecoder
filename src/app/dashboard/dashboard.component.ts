@@ -28,6 +28,9 @@ export class DashboardComponent implements OnInit {
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
   }
+  openModal1(template1: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template1);
+  }
 
 
   ngOnInit(): void {

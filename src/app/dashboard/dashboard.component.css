@@ -17,5 +17,8 @@ li:hover {
         display: none;
     }
 }
+.side {
+    float: right;
+}
 
 
